@@ -1,0 +1,19 @@
+/* line 2, ../sass/style.sass */
+h1 {
+  color: yellow;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 5, ../sass/style.sass */
+h2 {
+  -webkit-transform: translate(1em, 1em);
+  -moz-transform: translate(1em, 1em);
+  -ms-transform: translate(1em, 1em);
+  -o-transform: translate(1em, 1em);
+  transform: translate(1em, 1em);
+  color: blue;
+}
