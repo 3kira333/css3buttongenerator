@@ -21,7 +21,7 @@ grunt.initConfig({
 	concat: {
 		dist: {
 			src: ['css/*.css'],
-			dest: 'css/all.css',
+			dest: 'production/css/all.css',
 			stripBanners: {
 				options: {
 					block: true,
@@ -32,8 +32,8 @@ grunt.initConfig({
 	},
 	cssmin: {
 		dist: {
-			src: ['css/all.css'],
-			dest: 'css/all.min.css'
+			src: ['production/css/all.css'],
+			dest: 'production/css/all.min.css'
 		}
 	},
 	uncss: {
