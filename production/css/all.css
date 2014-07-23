@@ -8132,3 +8132,9 @@ h2 {
     margin-bottom: 16px;
   }
 }
+@media (max-width: 480px) {
+  /* line 112, ../sass/style.sass */
+  .textarea {
+    width: 80%;
+  }
+}
