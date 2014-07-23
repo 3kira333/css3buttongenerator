@@ -1,11 +1,7 @@
 (function() {
 
 //variables
-var changeRadius = $('#slider1'),
-		changeBorderSize = $('#slider2'),
-		result = $('#result'),
-		maxRadius = 22.
-		minRadius = 0;
+var result = $('#result');
 
 //activate slider of border radius
 $('#slider1').slider({
@@ -13,8 +9,9 @@ $('#slider1').slider({
 	min: 0,
 	max: 20,
 	value: 4,
+	animate: true,
 	slide: function(event, ui) {
-		var newRadius = changeRadius.slider('value');
+		var newRadius = ui.value;
 		result.css({
 			'border-radius' : newRadius
 		})
@@ -25,12 +22,12 @@ $('#slider1').slider({
 //activate slider of border size
 $('#slider2').slider({
 	range: 'min',
-	min: 0,
+	min: 1,
 	max: 20,
-	value: 1,
+	value: 0,
+	animate: true,
 	slide: function(event, ui) {
-		var newSize = changeBorderSize.slider('value');
-				console.log(newSize);
+		var newSize = ui.value;
 		result.css({
 			'border-width' : newSize
 		})
