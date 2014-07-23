@@ -5,6 +5,11 @@ body {
 }
 
 /* line 6, ../sass/style.sass */
+input {
+  font-family: "Myriad Pro";
+}
+
+/* line 8, ../sass/style.sass */
 .wrapper {
   background-color: white;
   -webkit-border-radius: 10px;
@@ -16,32 +21,33 @@ body {
   -moz-box-shadow: 0 1px rgba(255, 255, 255, 0.25), 0 1px 3px rgba(0, 0, 0, 0.52);
   box-shadow: 0 1px rgba(255, 255, 255, 0.25), 0 1px 3px rgba(0, 0, 0, 0.52);
   margin-top: 10px;
+  margin-bottom: 16px;
   width: 90%;
 }
 
-/* line 12, ../sass/style.sass */
+/* line 15, ../sass/style.sass */
 .container-divider {
   border-bottom: 1px dashed #a1a1a1;
   overflow: hidden;
   margin-bottom: 50px;
 }
 
-/* line 16, ../sass/style.sass */
+/* line 19, ../sass/style.sass */
 .container-divider .col-md-6 {
   height: 250px;
 }
 
-/* line 18, ../sass/style.sass */
+/* line 21, ../sass/style.sass */
 h1 {
   font-size: 24px;
 }
 
-/* line 20, ../sass/style.sass */
+/* line 23, ../sass/style.sass */
 h2 {
   font-size: 18px;
 }
 
-/* line 22, ../sass/style.sass */
+/* line 25, ../sass/style.sass */
 .ui-slider {
   background-color: #838383;
   -webkit-box-shadow: 0 1px rgba(255, 255, 255, 0.35);
@@ -57,7 +63,7 @@ h2 {
   margin-top: 27px;
 }
 
-/* line 30, ../sass/style.sass */
+/* line 33, ../sass/style.sass */
 .ui-slider-range {
   -webkit-border-radius: 2px 4px;
   -moz-border-radius: 2px 3px 3px 2px / 4px 4px 3px 3px;
@@ -74,7 +80,7 @@ h2 {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0.08));
 }
 
-/* line 36, ../sass/style.sass */
+/* line 39, ../sass/style.sass */
 .ui-slider-handle {
   -webkit-border-radius: 11px 11px;
   -moz-border-radius: 11px 10px 10px 11px / 11px 11px 10px 10px;
@@ -86,18 +92,19 @@ h2 {
   outline: 0;
 }
 
-/* line 41, ../sass/style.sass */
+/* line 44, ../sass/style.sass */
 .col-md-my {
   padding-left: 7px;
 }
 
-/* line 43, ../sass/style.sass */
+/* line 46, ../sass/style.sass */
 #text-form {
-  margin-top: 15px;
+  margin-top: 10px;
+  padding: 10px 7px 9px;
   width: 100%;
 }
 
-/* line 48, ../sass/style.sass */
+/* line 52, ../sass/style.sass */
 .btn {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -123,36 +130,63 @@ h2 {
   height: 45px;
   text-shadow: 0 1px rgba(0, 0, 0, 0.32);
 }
-/* line 62, ../sass/style.sass */
+/* line 66, ../sass/style.sass */
 .btn:hover {
   color: white;
   background-color: #64b6ea;
 }
-/* line 65, ../sass/style.sass */
+/* line 69, ../sass/style.sass */
 .btn:focus {
   color: white;
 }
 
-/* line 69, ../sass/style.sass */
+/* line 73, ../sass/style.sass */
 .container-code {
   margin-bottom: 18px;
   overflow: hidden;
 }
 
-/* line 72, ../sass/style.sass */
+/* line 76, ../sass/style.sass */
 .textarea {
   padding: 10px 7px;
   resize: none;
 }
 
-/* line 75, ../sass/style.sass */
+/* line 79, ../sass/style.sass */
 .input-email {
   margin-bottom: 16px;
   padding: 10px 7px 9px;
 }
 
+/* line 82, ../sass/style.sass */
+.input-submit {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 60px;
+  outline: 0;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.32);
+  width: 109px;
+  height: 38px;
+  -webkit-border-radius: 19px;
+  -moz-border-radius: 19px;
+  -ms-border-radius: 19px;
+  -o-border-radius: 19px;
+  border-radius: 19px;
+  background-color: #50ac44;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.19), inset 0 2px rgba(255, 255, 255, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.31);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.19), inset 0 2px rgba(255, 255, 255, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.31);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.19), inset 0 2px rgba(255, 255, 255, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.31);
+  border: solid 1px #3b8e31;
+  background-image: -webkit-gradient(linear, to bottom, to top, color-stop(0%, rgba(255, 255, 255, 0.34)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0));
+  background-image: -moz-linear-gradient(to bottom, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(to bottom, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0));
+}
+
 @media (max-width: 768px) {
-  /* line 90, ../sass/style.sass */
+  /* line 107, ../sass/style.sass */
   .textarea {
     float: none !important;
   }
