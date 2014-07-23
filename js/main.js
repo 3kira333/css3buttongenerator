@@ -1,5 +1,3 @@
-
-
 (function() {
 
 //variables
@@ -13,11 +11,10 @@ var changeRadius = $('#slider1'),
 $('#slider1').slider({
 	range: 'min',
 	min: 0,
-	max: 22,
+	max: 20,
 	value: 4,
 	slide: function(event, ui) {
 		var newRadius = changeRadius.slider('value');
-				// console.log(newRadius);
 		result.css({
 			'border-radius' : newRadius
 		})
@@ -39,10 +36,6 @@ $('#slider2').slider({
 		})
 	}
 });
-
-
-
-
 
 
 
