@@ -1,23 +1,159 @@
 /* line 3, ../sass/style.sass */
 body {
-  background-image: url("img/pattern.png");
-  font-family: "Segoe UI";
+  background-image: url("../img/pattern.png");
+  font-family: "Segoe UI", sans-serif;
 }
 
 /* line 6, ../sass/style.sass */
+.wrapper {
+  background-color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 1px rgba(255, 255, 255, 0.25), 0 1px 3px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 0 1px rgba(255, 255, 255, 0.25), 0 1px 3px rgba(0, 0, 0, 0.52);
+  box-shadow: 0 1px rgba(255, 255, 255, 0.25), 0 1px 3px rgba(0, 0, 0, 0.52);
+  margin-top: 10px;
+  width: 90%;
+}
+
+/* line 12, ../sass/style.sass */
+.container-divider {
+  border-bottom: 1px dashed #a1a1a1;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+/* line 16, ../sass/style.sass */
+.container-divider .col-md-6 {
+  height: 250px;
+}
+
+/* line 18, ../sass/style.sass */
 h1 {
   font-size: 24px;
 }
 
-/* line 8, ../sass/style.sass */
+/* line 20, ../sass/style.sass */
 h2 {
   font-size: 18px;
 }
 
-/* line 10, ../sass/style.sass */
+/* line 22, ../sass/style.sass */
+.ui-slider {
+  background-color: #838383;
+  -webkit-box-shadow: 0 1px rgba(255, 255, 255, 0.35);
+  -moz-box-shadow: 0 1px rgba(255, 255, 255, 0.35);
+  box-shadow: 0 1px rgba(255, 255, 255, 0.35);
+  border: solid 1px rgba(44, 44, 44, 0.54);
+  background-image: -webkit-gradient(linear, to bottom, to top, color-stop(0%, rgba(0, 0, 0, 0.06)), color-stop(100%, rgba(255, 255, 255, 0.06)));
+  background-image: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.06));
+  background-image: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.06));
+  background-image: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.06));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.06));
+  height: 0.6em;
+  margin-top: 27px;
+}
+
+/* line 30, ../sass/style.sass */
+.ui-slider-range {
+  -webkit-border-radius: 2px 4px;
+  -moz-border-radius: 2px 3px 3px 2px / 4px 4px 3px 3px;
+  border-radius: 2px 3px 3px 2px / 4px 4px 3px 3px;
+  background-color: #2b91d8;
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.23);
+  -moz-box-shadow: inset 0 1px rgba(255, 255, 255, 0.23);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.23);
+  border: solid 1px #1f5b85;
+  background-image: -webkit-gradient(linear, to top, to bottom, color-stop(0%, rgba(0, 0, 0, 0.08)), color-stop(100%, rgba(255, 255, 255, 0.08)));
+  background-image: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0.08));
+  background-image: -moz-linear-gradient(to top, rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0.08));
+  background-image: -o-linear-gradient(to top, rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0.08));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0.08));
+}
+
+/* line 36, ../sass/style.sass */
+.ui-slider-handle {
+  -webkit-border-radius: 11px 11px;
+  -moz-border-radius: 11px 10px 10px 11px / 11px 11px 10px 10px;
+  border-radius: 11px 10px 10px 11px / 11px 11px 10px 10px;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.35), inset 0 1px rgba(255, 255, 255, 0.67), inset 0 0 3px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.35), inset 0 1px rgba(255, 255, 255, 0.67), inset 0 0 3px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.35), inset 0 1px rgba(255, 255, 255, 0.67), inset 0 0 3px rgba(0, 0, 0, 0.06);
+  border: solid 1px #888888;
+  outline: 0;
+}
+
+/* line 41, ../sass/style.sass */
+.col-md-my {
+  padding-left: 7px;
+}
+
+/* line 43, ../sass/style.sass */
+#text-form {
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* line 48, ../sass/style.sass */
 .btn {
-  border: 1px solid #3181b4;
-  box-shadow: inset 0 1px 0 0 #cce7f8;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #37a1e4;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.19), inset 0 2px rgba(255, 255, 255, 0.58), inset 0 0 5px rgba(255, 255, 255, 0.38);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.19), inset 0 2px rgba(255, 255, 255, 0.58), inset 0 0 5px rgba(255, 255, 255, 0.38);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.19), inset 0 2px rgba(255, 255, 255, 0.58), inset 0 0 5px rgba(255, 255, 255, 0.38);
+  border: solid 1px #3181b4;
+  background-image: -webkit-gradient(linear, to bottom, to top, color-stop(0%, rgba(255, 255, 255, 0.26)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0));
+  background-image: -moz-linear-gradient(to bottom, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(to bottom, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0));
+  color: white;
   font-family: "Myriad Pro";
+  font-size: 16px;
   font-weight: bold;
+  margin-top: 70px;
+  width: 140px;
+  height: 45px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.32);
+}
+/* line 62, ../sass/style.sass */
+.btn:hover {
+  color: white;
+  background-color: #64b6ea;
+}
+/* line 65, ../sass/style.sass */
+.btn:focus {
+  color: white;
+}
+
+/* line 69, ../sass/style.sass */
+.container-code {
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+/* line 72, ../sass/style.sass */
+.textarea {
+  padding: 10px 7px;
+  resize: none;
+}
+
+/* line 75, ../sass/style.sass */
+.input-email {
+  margin-bottom: 16px;
+  padding: 10px 7px 9px;
+}
+
+@media (max-width: 768px) {
+  /* line 90, ../sass/style.sass */
+  .textarea {
+    float: none !important;
+  }
 }

@@ -8,6 +8,9 @@
 
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/jquery-ui.structure.css">
+	<link rel="stylesheet" href="css/jquery-ui.theme.css">
 	<link href="css/style.css" rel="stylesheet">
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -18,21 +21,79 @@
 	<![endif]-->
 </head>
 <body>
-	<header>
-		<h1 class="text-center text-uppercase">CSS3 BUTTON GENERATOR</h1>
-	</header>
-	<div class="container">
-		<div class="col-md-6">
-			<h2 class="text-center text-uppercase">options</h2>
-			<h2>Border-radius</h2>
-			<h2>Border-size</h2>
-			<h2>Text</h2>
-		</div>
-		<div class="col-md-6">
-			<h2 class="text-center text-uppercase">result</h2>
-			<button class="btn center-block">Button text</button>
-		</div>
+	<div class="container wrapper">
+		<header>
+			<h1 class="text-center text-uppercase">CSS3 BUTTON GENERATOR</h1>
+		</header>
+
+<div class="container-divider">
+	<!-- Options -->
+			<div class="col-md-6">
+				<h2 class="text-center text-uppercase">options</h2>
+	
+	<!-- Border-radius -->
+				<div class="row">
+					<div class="col-xs-4">
+						<h2 class="text-right">Border-radius</h2>
+					</div>
+					<div class="col-xs-7 col-sm-5 col-xs-ofset-3">
+						<div id="slider1"></div>
+					</div>
+				</div>
+	
+	<!-- Border-size -->
+				<div class="row">
+					<div class="col-xs-4">
+						<h2 class="text-right">Border-size</h2>
+					</div>
+					<div class="col-xs-7 col-sm-5 col-xs-ofset-3">
+						<div id="slider2"></div>
+					</div>
+				</div>
+	
+	<!-- Text -->
+				<div class="row">
+					<div class="col-xs-4">
+						<h2 class="text-right">Text</h2>
+					</div>
+					<div class="col-xs-7 col-sm-5 col-xs-ofset-3 col-md-my">
+						<input id="text-form" type="text" placeholder="Button text">
+					</div>
+				</div>
+			</div><!--END Options -->
+	
+	
+	<!-- Result -->
+			<div class="col-md-6">
+				<h2 class="text-center text-uppercase">result</h2>
+				<button class="btn center-block">Button text</button>
+			</div>
+</div><!--END container-divider -->
+
+<div class="container-code">
+	<div class="col-sm-6">
+		<textarea class="textarea pull-right center-block" name="" id="" cols="35" rows="7" placeholder="HTML code" readonly="true"></textarea>
 	</div>
+	
+	
+	<div class="col-sm-6">
+		<textarea class="textarea pull-left center-block" name="" id="" cols="35" rows="7" placeholder="CSS code" readonly="true"></textarea>
+	</div>
+</div><!-- END container-code -->
+
+
+<div class="col-xs-12">
+	<form action="URL">
+		<input class="input-email center-block" type="email" placeholder="mail">
+		<input class="center-block" type="button">
+	</form>
+</div>
+
+
+
+
+
+	</div><!--END container wrapper -->
 
 
 
@@ -47,5 +108,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
