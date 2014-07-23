@@ -8131,9 +8131,22 @@ h2 {
   .textarea:first-of-type {
     margin-bottom: 16px;
   }
+
+  /* line 111, ../sass/style.sass */
+  .container-divider .col-md-6 {
+    height: 190px;
+  }
+  /* line 113, ../sass/style.sass */
+  .container-divider .col-md-6:last-of-type {
+    height: 100px;
+  }
+  /* line 115, ../sass/style.sass */
+  .container-divider .col-md-6:last-of-type .btn {
+    margin-top: 20px;
+  }
 }
 @media (max-width: 480px) {
-  /* line 112, ../sass/style.sass */
+  /* line 118, ../sass/style.sass */
   .textarea {
     width: 80%;
   }
