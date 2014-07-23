@@ -190,4 +190,9 @@ h2 {
   .textarea {
     float: none !important;
   }
+
+  /* line 109, ../sass/style.sass */
+  .textarea:first-of-type {
+    margin-bottom: 16px;
+  }
 }
