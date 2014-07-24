@@ -8062,42 +8062,56 @@ h2 {
   font-size: 16px;
   font-weight: bold;
   margin-top: 70px;
+  outline: 0;
   width: 115px;
   height: 26px;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
   text-shadow: 0 1px rgba(0, 0, 0, 0.32);
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 67, ../sass/style.sass */
+/* line 69, ../sass/style.sass */
 .btn:hover {
   color: white;
   background-color: #64b6ea;
 }
-/* line 70, ../sass/style.sass */
+/* line 72, ../sass/style.sass */
 .btn:focus {
   color: white;
+  outline: 0;
+}
+/* line 75, ../sass/style.sass */
+.btn:active {
+  outline: 0;
+}
+/* line 77, ../sass/style.sass */
+.btn:active:focus {
+  outline: 0;
 }
 
-/* line 74, ../sass/style.sass */
+/* line 81, ../sass/style.sass */
 .container-code {
   margin-bottom: 18px;
   overflow: hidden;
 }
 
-/* line 77, ../sass/style.sass */
+/* line 84, ../sass/style.sass */
 .textarea {
   padding: 10px 7px;
   resize: none;
 }
 
-/* line 80, ../sass/style.sass */
+/* line 87, ../sass/style.sass */
 .input-email {
   margin-bottom: 16px;
   padding: 10px 7px 9px;
 }
 
-/* line 83, ../sass/style.sass */
+/* line 90, ../sass/style.sass */
 .input-submit {
   font-size: 14px;
   font-weight: bold;
@@ -8125,31 +8139,31 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  /* line 108, ../sass/style.sass */
+  /* line 115, ../sass/style.sass */
   .textarea {
     float: none !important;
   }
 
-  /* line 110, ../sass/style.sass */
+  /* line 117, ../sass/style.sass */
   .textarea:first-of-type {
     margin-bottom: 16px;
   }
 
-  /* line 112, ../sass/style.sass */
+  /* line 119, ../sass/style.sass */
   .container-divider .col-md-6 {
     height: 190px;
   }
-  /* line 114, ../sass/style.sass */
+  /* line 121, ../sass/style.sass */
   .container-divider .col-md-6:last-of-type {
     height: 100px;
   }
-  /* line 116, ../sass/style.sass */
+  /* line 123, ../sass/style.sass */
   .container-divider .col-md-6:last-of-type .btn {
     margin-top: 20px;
   }
 }
 @media (max-width: 480px) {
-  /* line 119, ../sass/style.sass */
+  /* line 126, ../sass/style.sass */
   .textarea {
     width: 80%;
   }
