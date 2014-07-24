@@ -5,6 +5,7 @@ var app = {
 		this.setUpListeners();
 	},
 	setUpListeners: function() {
+
 		//activate slider of border radius
 		$('#slider1').slider({
 			range: 'min',
@@ -14,6 +15,7 @@ var app = {
 			animate: true,
 			slide: $.proxy(this.changeRadius, this)
 		});
+
 		//activate slider of border size
 		$('#slider2').slider({
 			range: 'min',
@@ -23,9 +25,14 @@ var app = {
 			animate: true,
 			slide: $.proxy(this.changeSize, this)
 		});
+
 		// drag text from input and drop to button
 		$('#text-form').on('keyup', $.proxy(this.changeText, this));
+
 	},
+
+
+
 	result : $('#result'),
 	changeRadius: function(event, ui) {
 		//  drag value from slider to drop to button
@@ -36,6 +43,7 @@ var app = {
 		});
 		this.updateResultCSS(newRadius, newSize);
 	},
+
 	changeSize: function(event, ui) {
 		//  drag value from slider to drop to button
 		var bdRadius = this.result.css('border-radius'),
@@ -46,12 +54,14 @@ var app = {
 		});
 		this.updateResultCSS(newRadius, newSize);
 	},
+
 	changeText: function() {
 		//  drag text from input and drop to button
 		var newText = $('#text-form').val();
 		$(this.result).text(newText);
 		this.updateResultHTML();
 	},
+
 	updateResultCSS: function(bdRadius, bdSize) {
 		//  updateResultBorderRadiusAndSize
 		var cssResultArea = $('#cssCode');
@@ -81,6 +91,7 @@ var app = {
 					cssResultArea.text('')
 		}
 	},
+
 	updateResultHTML: function() {
 		//  updateResultHTML
 		var txtInput = this.result.text(),
@@ -89,6 +100,8 @@ var app = {
 					'<button>' + txtInput + '</button>\n'
 		)
 	}
+
+
 }
 
 app.initialize();
