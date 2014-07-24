@@ -202,32 +202,38 @@ h2 {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0));
 }
 
+@media (max-width: 980px) {
+  /* line 107, ../sass/style.sass */
+  .textarea {
+    width: 90%;
+  }
+}
 @media (max-width: 768px) {
-  /* line 115, ../sass/style.sass */
+  /* line 110, ../sass/style.sass */
   .textarea {
     float: none !important;
   }
 
-  /* line 117, ../sass/style.sass */
+  /* line 112, ../sass/style.sass */
   .textarea:first-of-type {
     margin-bottom: 16px;
   }
 
-  /* line 119, ../sass/style.sass */
+  /* line 114, ../sass/style.sass */
   .container-divider .col-md-6 {
     height: 190px;
   }
-  /* line 121, ../sass/style.sass */
+  /* line 116, ../sass/style.sass */
   .container-divider .col-md-6:last-of-type {
     height: 100px;
   }
-  /* line 123, ../sass/style.sass */
+  /* line 118, ../sass/style.sass */
   .container-divider .col-md-6:last-of-type .btn {
     margin-top: 20px;
   }
 }
 @media (max-width: 480px) {
-  /* line 126, ../sass/style.sass */
+  /* line 121, ../sass/style.sass */
   .textarea {
     width: 80%;
   }
