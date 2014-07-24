@@ -34,6 +34,9 @@ grunt.initConfig({
 		dist: {
 			src: ['production/all.css'],
 			dest: 'production/all.min.css'
+		},
+		options: {
+			banner: '/* Created by Andrey Korshunov */'
 		}
 	},
 	uncss: {
