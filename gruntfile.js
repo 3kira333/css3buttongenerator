@@ -41,6 +41,8 @@ grunt.initConfig({
 									'.ui-slider-handle',
 									'.has-error',
 									'.has-success',
+									'.btn.disabled',
+									'.btn[disabled]',
 									'.tooltip',
 									'.tooltip.in',
 									'.tooltip.right',

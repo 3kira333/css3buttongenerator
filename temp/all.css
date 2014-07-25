@@ -1517,6 +1517,16 @@ h2 {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
 }
 
+.btn.disabled,
+.btn[disabled] {
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: .65;
+}
+
 @-webkit-keyframes progress-bar-stripes {
   from {
     background-position: 40px 0;
