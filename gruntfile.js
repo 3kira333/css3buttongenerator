@@ -40,7 +40,10 @@ grunt.initConfig({
 									'.ui-slider-range',
 									'.ui-slider-handle',
 									'.has-error',
-									'.has-success'
+									'.has-success',
+									'.tooltip',
+									'.tooltip.in',
+									'.tooltip.right'
 									],
 				csspath: 'css/',
 				stylesheets  : ['bootstrap.css', 'bootstrap-theme.css', 'style.css']

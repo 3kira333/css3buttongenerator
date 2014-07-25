@@ -75,7 +75,7 @@ var app = {
 	changeRadius: function(event, ui) {
 		//  drag value from slider to drop to button
 		var newRadius = ui.value,
-				newSize = parseInt( app.result.css('border-width'), 10 );
+				newSize = parseInt( app.result.css('border-top-width'), 10 );// it because of fucking ie and ff
 		app.result.css({
 			'border-radius' : newRadius
 		});
@@ -84,9 +84,11 @@ var app = {
 
 	changeSize: function(event, ui) {
 		//  drag value from slider to drop to button
-		var bdRadius = app.result.css('border-radius'),
+		var bdRadius = app.result.css('border-top-left-radius'),// it because of fucking ie and ff
 				newRadius = Math.round( parseFloat(bdRadius) ),
 				newSize = ui.value;
+				console.log(bdRadius);
+				console.log(typeof bdRadius);
 		app.result.css({
 			'border-width' : newSize
 		});
