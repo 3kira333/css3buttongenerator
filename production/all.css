@@ -8116,11 +8116,12 @@ h2 {
   font-size: 14px;
   font-weight: bold;
   color: white;
+  margin-top: 16px;
   margin-bottom: 60px;
   outline: 0;
   text-shadow: 0 1px rgba(0, 0, 0, 0.32);
-  width: 109px;
-  height: 38px;
+  width: 75px;
+  height: 27px;
   -webkit-border-radius: 19px;
   -moz-border-radius: 19px;
   -ms-border-radius: 19px;
@@ -8137,39 +8138,61 @@ h2 {
   background-image: -o-linear-gradient(to bottom, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0));
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0));
 }
+/* line 105, ../sass/style.sass */
+.input-submit:hover {
+  background-color: #6dc162;
+}
+
+/* line 108, ../sass/style.sass */
+.has-error {
+  border-color: #ce8483;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  outline: 0;
+}
+
+/* line 112, ../sass/style.sass */
+.has-success {
+  border-color: #3c763d;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #3c763d;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #3c763d;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #3c763d;
+  outline: 0;
+}
 
 @media (max-width: 980px) {
-  /* line 107, ../sass/style.sass */
+  /* line 120, ../sass/style.sass */
   .textarea {
     width: 90%;
   }
 }
 @media (max-width: 768px) {
-  /* line 110, ../sass/style.sass */
+  /* line 123, ../sass/style.sass */
   .textarea {
     float: none !important;
   }
 
-  /* line 112, ../sass/style.sass */
+  /* line 125, ../sass/style.sass */
   .textarea:first-of-type {
     margin-bottom: 16px;
   }
 
-  /* line 114, ../sass/style.sass */
+  /* line 127, ../sass/style.sass */
   .container-divider .col-md-6 {
     height: 190px;
   }
-  /* line 116, ../sass/style.sass */
+  /* line 129, ../sass/style.sass */
   .container-divider .col-md-6:last-of-type {
     height: 100px;
   }
-  /* line 118, ../sass/style.sass */
+  /* line 131, ../sass/style.sass */
   .container-divider .col-md-6:last-of-type .btn {
     margin-top: 20px;
   }
 }
 @media (max-width: 480px) {
-  /* line 121, ../sass/style.sass */
+  /* line 134, ../sass/style.sass */
   .textarea {
     width: 80%;
   }

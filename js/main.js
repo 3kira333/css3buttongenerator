@@ -2,7 +2,7 @@
 
 var app = {
 	initialize: function() {
-		this.setUpListeners();
+		app.setUpListeners();
 	},
 	setUpListeners: function() {
 
@@ -13,7 +13,7 @@ var app = {
 			max: 20,
 			value: 4,
 			animate: true,
-			slide: $.proxy(this.changeRadius, this)
+			slide: app.changeRadius
 		});
 
 		//activate slider of border size
@@ -23,43 +23,81 @@ var app = {
 			max: 10,
 			value: 0,
 			animate: true,
-			slide: $.proxy(this.changeSize, this)
+			slide: app.changeSize
 		});
 
 		// drag text from input and drop to button
-		$('#text-form').on('keyup', $.proxy(this.changeText, this));
+		$('#text-form').on('keyup', app.changeText);
 
+		$('form').on('submit', app.submitForm);
+		$('form').on('keyup', 'input', app.removeError);
 	},
 
+	submitForm: function(e) {
+		e.preventDefault();
+
+		var form = $(this),
+		submitButton = form.find('input[type=submit]');
+
+		if (app.validateForm(form) === false) return false;
+		submitButton.attr('disabled', 'disabled');
+		console.log('go in ajax');
+	},
+
+	validateForm: function(form) {
+			var input = $('#inputEmail'),
+					str = input.val(),
+					valid = true,
+					textError = 'Email required';
+
+
+			if (str === '') {
+				input.tooltip({
+					placement: 'right',
+					title: textError,
+					trigger: 'manual focus'
+				}).tooltip('show');
+				input.addClass('has-error').removeClass('has-success');
+				valid = false;
+			} else {
+				input.addClass('has-success').addClass('has-success');
+				input.tooltip('hide');
+			}
+			return valid;
+	},
+	removeError: function() {
+		$(this).tooltip('destroy');
+		$(this).removeClass('has-error');
+	},
 
 
 	result : $('#result'),
 	changeRadius: function(event, ui) {
 		//  drag value from slider to drop to button
 		var newRadius = ui.value,
-				newSize = parseInt( this.result.css('border-width'), 10 );
-		this.result.css({
+				newSize = parseInt( app.result.css('border-width'), 10 );
+		app.result.css({
 			'border-radius' : newRadius
 		});
-		this.updateResultCSS(newRadius, newSize);
+		app.updateResultCSS(newRadius, newSize);
 	},
 
 	changeSize: function(event, ui) {
 		//  drag value from slider to drop to button
-		var bdRadius = this.result.css('border-radius'),
+		var bdRadius = app.result.css('border-radius'),
 				newRadius = Math.round( parseFloat(bdRadius) ),
 				newSize = ui.value;
-		this.result.css({
+		app.result.css({
 			'border-width' : newSize
 		});
-		this.updateResultCSS(newRadius, newSize);
+		app.updateResultCSS(newRadius, newSize);
 	},
 
 	changeText: function() {
 		//  drag text from input and drop to button
 		var newText = $('#text-form').val();
-		$(this.result).text(newText);
-		this.updateResultHTML();
+		$(app.result).text(newText);
+		app.updateResultHTML();
 	},
 
 	updateResultCSS: function(bdRadius, bdSize) {
@@ -94,7 +132,7 @@ var app = {
 
 	updateResultHTML: function() {
 		//  updateResultHTML
-		var txtInput = this.result.text(),
+		var txtInput = app.result.text(),
 				htmlResultArea = $('#htmlCode');
 		htmlResultArea.text(
 					'<button>' + txtInput + '</button>\n'
