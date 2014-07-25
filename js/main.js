@@ -87,8 +87,6 @@ var app = {
 		var bdRadius = app.result.css('border-top-left-radius'),// it because of fucking ie and ff
 				newRadius = Math.round( parseFloat(bdRadius) ),
 				newSize = ui.value;
-				console.log(bdRadius);
-				console.log(typeof bdRadius);
 		app.result.css({
 			'border-width' : newSize
 		});

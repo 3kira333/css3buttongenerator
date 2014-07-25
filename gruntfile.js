@@ -43,7 +43,10 @@ grunt.initConfig({
 									'.has-success',
 									'.tooltip',
 									'.tooltip.in',
-									'.tooltip.right'
+									'.tooltip.right',
+									'.tooltip-inner',
+									'.tooltip-arrow',
+									'.tooltip.right .tooltip-arrow'
 									],
 				csspath: 'css/',
 				stylesheets  : ['bootstrap.css', 'bootstrap-theme.css', 'style.css']
