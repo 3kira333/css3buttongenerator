@@ -16,8 +16,17 @@ input
 	border-bottom: 1px dashed #a1a1a1
 	overflow: hidden
 	margin-bottom: 50px
+.divider
+	background: url(../img/divider.png) repeat-y
+	// display: inline-block
+	left: 50%
+	position: absolute
+	margin-top: 10px
+	width: 5px
+	height: 220px
 .container-divider .col-md-6
 	height: 250px
+	padding: 0
 h1
 	font-size: 24px
 h2
@@ -116,10 +125,18 @@ h2
 
 
 
-@media (max-width: 980px)
+@media (max-width: 992px)
+	.divider
+		background: url(../img/divider-horiz.png) repeat-x
+		left: 7.5%
+		height: 5px
+		margin-top: -30px
+		width: 85%
 	.textarea
 		width: 90%
 @media (max-width: 768px)
+	.divider
+		display: none
 	.textarea
 		float: none !important
 	.textarea:first-of-type
@@ -132,4 +149,4 @@ h2
 				margin-top: 20px
 @media (max-width: 480px)
 	.textarea
-		width: 80%
+		width: 80

@@ -15,24 +15,18 @@ grunt.initConfig({
 		},
 		scripts: {
 			files: ['sass/*.sass'],
-			tasks: ['compass','concat', 'cssmin']
+			tasks: ['compass', 'uncss', 'concat', 'cssmin']
 		}
 	},
 	concat: {
 		dist: {
-			src: ['css/*.css'],
-			dest: 'production/all.css',
-			stripBanners: {
-				options: {
-					block: true,
-					line: true
-				}
-			}
+			src: ['temp/jquery-ui.css', 'temp/jquery-ui.structure.css', 'temp/jquery-ui.theme.css', 'temp/unbootstrap+unstyle.css'],
+			dest: 'temp/all.css'
 		}
 	},
 	cssmin: {
 		dist: {
-			src: ['production/all.css'],
+			src: ['temp/all.css'],
 			dest: 'production/all.min.css'
 		},
 		options: {
@@ -42,12 +36,17 @@ grunt.initConfig({
 	uncss: {
 		dist: {
 			options: {
-				report: 'min',
+				ignore : ['.ui-slider',
+									'.ui-slider-range',
+									'.ui-slider-handle',
+									'.has-error',
+									'.has-success'
+									],
 				csspath: 'css/',
-				stylesheets: ['all.css']
+				stylesheets  : ['bootstrap.css', 'bootstrap-theme.css', 'style.css']
 			},
 			files: {
-				'css/cut.css' : ['index.html']
+				'temp/unbootstrap+unstyle.css' : ['index.html']
 			}
 		}
 	}
@@ -61,5 +60,5 @@ grunt.initConfig({
 	grunt.loadNpmTasks('grunt-uncss');
 
 	// grunt.registerTask();
-	grunt.registerTask('default', ['compass','concat', 'cssmin', 'watch']);
+	grunt.registerTask('default', ['compass', 'uncss','concat', 'cssmin', 'watch']);
 };
