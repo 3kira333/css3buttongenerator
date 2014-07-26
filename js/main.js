@@ -41,7 +41,26 @@ var app = {
 
 		if (app.validateForm(form) === false) return false;
 		submitButton.attr('disabled', 'disabled');
+
 		console.log('go in ajax');
+		var email =  'Your HTML code \n\r\n\r' +
+								$('#htmlCode').val() +
+								'\n\r' +
+								'Your CSS code \n\r\n\r' +
+								$('#cssCode').val();
+		var data =  $('#inputEmail').val();
+		console.log(data);
+		$.ajax({
+				url: 'php/mail.php',
+				type: 'POST',
+				data: {
+					'email' : data,
+					'getBody' : email
+				},
+				success: function (data) {
+					alert('Your email has been sent successfully!');
+				}
+			});
 	},
 
 	validateForm: function(form) {
@@ -105,7 +124,7 @@ var app = {
 		var cssResultArea = $('#cssCode');
 
 		if (bdRadius > 0 && bdSize > 0) {
-					cssResultArea.text(
+					cssResultArea.val(
 					'-webkit-border-radius: ' + bdRadius + 'px;\n' +
 					'-moz-border-radius: ' + bdRadius + 'px;\n'+
 					'-ms-border-radius: ' + bdRadius + 'px;\n' +
@@ -114,7 +133,7 @@ var app = {
 					'border-width: ' + bdSize + 'px;\n'
 			)
 		} else if (bdRadius > 0 && bdSize < 1) {
-					cssResultArea.text(
+					cssResultArea.val(
 					'-webkit-border-radius: ' + bdRadius + 'px;\n' +
 					'-moz-border-radius: ' + bdRadius + 'px;\n'+
 					'-ms-border-radius: ' + bdRadius + 'px;\n' +
@@ -122,11 +141,11 @@ var app = {
 					'border-radius: ' + bdRadius + 'px;\n'
 			)
 		} else if (bdRadius < 1 && bdSize > 0) {
-					cssResultArea.text(
+					cssResultArea.val(
 					'border-width: ' + bdSize + 'px;\n'
 			)
 		} else if (bdRadius < 1 && bdSize < 1) {
-					cssResultArea.text('')
+					cssResultArea.val('')
 		}
 	},
 
@@ -134,9 +153,12 @@ var app = {
 		//  updateResultHTML
 		var txtInput = app.result.text(),
 				htmlResultArea = $('#htmlCode');
-		htmlResultArea.text(
-					'<button>' + txtInput + '</button>\n'
-		)
+		// htmlResultArea.text(
+		// 			'<button>' + txtInput + '</button>\n'
+		// )
+		htmlResultArea.val(
+						'<button>' + txtInput + '</button>\n'
+			)
 	}
 
 
