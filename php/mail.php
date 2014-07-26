@@ -28,8 +28,8 @@ $mail->Port = 465;
 $mail->CharSet = 'UTF-8';
 
 $body = $getBody;
-$mail->Username = '***@gmail.com';
-$mail->Password = '***';
+$mail->Username = 'razor1702@gmail.com';
+$mail->Password = 'callofduty4';
 $mail->FromName = 'CSS3 Button Generator';
 $mail->SetFrom('CSS3 Button Generator');
 $mail->Subject = 'Your Code';
