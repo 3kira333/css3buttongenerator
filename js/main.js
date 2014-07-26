@@ -43,13 +43,13 @@ var app = {
 		submitButton.attr('disabled', 'disabled');
 
 		console.log('go in ajax');
-		var email =  'Your HTML code \n\r\n\r' +
+		var email = 'Your HTML code \n' +
 								$('#htmlCode').val() +
-								'\n\r' +
-								'Your CSS code \n\r\n\r' +
+								'\n' +
+								'Your CSS code \n' +
 								$('#cssCode').val();
 		var data =  $('#inputEmail').val();
-		console.log(data);
+		console.log(email);
 		$.ajax({
 				url: 'php/mail.php',
 				type: 'POST',
