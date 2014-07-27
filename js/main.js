@@ -42,14 +42,14 @@ var app = {
 		if (app.validateForm(form) === false) return false;
 		submitButton.attr('disabled', 'disabled');
 
-		console.log('go in ajax');
+
 		var email = 'Your HTML code \n' +
 								$('#htmlCode').val() +
 								'\n' +
 								'Your CSS code \n' +
 								$('#cssCode').val();
 		var data =  $('#inputEmail').val();
-		console.log(email);
+
 		$.ajax({
 				url: 'php/mail.php',
 				type: 'POST',
@@ -103,13 +103,17 @@ var app = {
 
 	changeSize: function(event, ui) {
 		//  drag value from slider to drop to button
-		var bdRadius = app.result.css('border-top-left-radius'),// it because of fucking ie and ff
-				newRadius = Math.round( parseFloat(bdRadius) ),
-				newSize = ui.value;
+		var newSize = ui.value,
+				newRadius = parseInt( app.result.css('border-top-left-radius'), 10 );// it because of fucking ie and ff
+
+		if (newRadius !== NaN) {newRadius = $('#slider1').slider('value')}
 		app.result.css({
 			'border-width' : newSize
 		});
 		app.updateResultCSS(newRadius, newSize);
+		console.log(newSize);
+		console.log($('#slider1').slider('value'));
+		console.log(newRadius);
 	},
 
 	changeText: function() {
