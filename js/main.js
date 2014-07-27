@@ -111,9 +111,6 @@ var app = {
 			'border-width' : newSize
 		});
 		app.updateResultCSS(newRadius, newSize);
-		console.log(newSize);
-		console.log($('#slider1').slider('value'));
-		console.log(newRadius);
 	},
 
 	changeText: function() {
