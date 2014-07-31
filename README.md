@@ -1,3 +1,3 @@
 This is a css3buttongenerator
 ===================
-should be ie+
+should be ie8+
