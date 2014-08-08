@@ -50,7 +50,7 @@ var app = {
 		submitButton = form.find('input[type=submit]');
 
 		if (app.validateForm(form) === false) return false;
-		
+		submitButton.prop( "disabled", true );
 
 
 		var email = 'Your HTML code \n' +
@@ -72,6 +72,7 @@ var app = {
 				},
 				complete: function() {
 					$('img.loader').hide();
+					submitButton.prop( "disabled", false );
 				},
 				success: function (data) {
 					alert('Your email has been sent successfully!');
