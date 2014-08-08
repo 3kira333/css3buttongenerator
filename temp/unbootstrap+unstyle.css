@@ -17,6 +17,10 @@ h1 {
   font-size: 2em;
 }
 
+img {
+  border: 0;
+}
+
 button,
 input,
 textarea {
@@ -60,6 +64,14 @@ textarea {
     background: transparent !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
+  }
+
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
   }
 
   h2 {
@@ -110,6 +122,10 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+img {
+  vertical-align: middle;
 }
 
 h1,
@@ -411,11 +427,21 @@ body {
 
 /* line 6, ../sass/style.sass */
 
+.loader {
+  bottom: 300px;
+  left: 50%;
+  margin-left: -16px;
+  position: absolute;
+  display: none;
+}
+
+/* line 12, ../sass/style.sass */
+
 input {
   font-family: "Myriad Pro", sans-serif;
 }
 
-/* line 8, ../sass/style.sass */
+/* line 14, ../sass/style.sass */
 
 .wrapper {
   background-color: white;
@@ -432,7 +458,7 @@ input {
   width: 90%;
 }
 
-/* line 15, ../sass/style.sass */
+/* line 21, ../sass/style.sass */
 
 .container-divider {
   border-bottom: 1px dashed #a1a1a1;
@@ -440,7 +466,7 @@ input {
   margin-bottom: 50px;
 }
 
-/* line 19, ../sass/style.sass */
+/* line 25, ../sass/style.sass */
 
 .divider {
   background: url(../img/divider.png) repeat-y;
@@ -451,26 +477,26 @@ input {
   height: 220px;
 }
 
-/* line 27, ../sass/style.sass */
+/* line 33, ../sass/style.sass */
 
 .container-divider .col-md-6 {
   height: 250px;
   padding: 0;
 }
 
-/* line 30, ../sass/style.sass */
+/* line 36, ../sass/style.sass */
 
 h1 {
   font-size: 24px;
 }
 
-/* line 32, ../sass/style.sass */
+/* line 38, ../sass/style.sass */
 
 h2 {
   font-size: 18px;
 }
 
-/* line 34, ../sass/style.sass */
+/* line 40, ../sass/style.sass */
 
 .ui-slider {
   background-color: #838383;
@@ -487,7 +513,7 @@ h2 {
   margin-top: 27px;
 }
 
-/* line 42, ../sass/style.sass */
+/* line 48, ../sass/style.sass */
 
 .ui-slider-range {
   -webkit-border-radius: 2px 4px;
@@ -505,7 +531,7 @@ h2 {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0.08));
 }
 
-/* line 48, ../sass/style.sass */
+/* line 54, ../sass/style.sass */
 
 .ui-slider-handle {
   -webkit-border-radius: 11px 11px;
@@ -518,13 +544,13 @@ h2 {
   outline: 0;
 }
 
-/* line 53, ../sass/style.sass */
+/* line 59, ../sass/style.sass */
 
 .col-md-my {
   padding-left: 7px;
 }
 
-/* line 55, ../sass/style.sass */
+/* line 61, ../sass/style.sass */
 
 #text-form {
   margin-top: 10px;
@@ -532,7 +558,7 @@ h2 {
   width: 100%;
 }
 
-/* line 61, ../sass/style.sass */
+/* line 67, ../sass/style.sass */
 
 .btn {
   -webkit-border-radius: 4px;
@@ -568,54 +594,54 @@ h2 {
   box-sizing: content-box;
 }
 
-/* line 78, ../sass/style.sass */
+/* line 84, ../sass/style.sass */
 
 .btn:hover {
   color: white;
   background-color: #64b6ea;
 }
 
-/* line 81, ../sass/style.sass */
+/* line 87, ../sass/style.sass */
 
 .btn:focus {
   color: white;
   outline: 0;
 }
 
-/* line 84, ../sass/style.sass */
+/* line 90, ../sass/style.sass */
 
 .btn:active {
   outline: 0;
 }
 
-/* line 86, ../sass/style.sass */
+/* line 92, ../sass/style.sass */
 
 .btn:active:focus {
   outline: 0;
 }
 
-/* line 90, ../sass/style.sass */
+/* line 96, ../sass/style.sass */
 
 .container-code {
   margin-bottom: 18px;
   overflow: hidden;
 }
 
-/* line 93, ../sass/style.sass */
+/* line 99, ../sass/style.sass */
 
 .textarea {
   padding: 10px 7px;
   resize: none;
 }
 
-/* line 96, ../sass/style.sass */
+/* line 102, ../sass/style.sass */
 
 .input-email {
   margin-bottom: 16px;
   padding: 10px 7px 9px;
 }
 
-/* line 99, ../sass/style.sass */
+/* line 105, ../sass/style.sass */
 
 .input-submit {
   font-size: 14px;
@@ -644,13 +670,13 @@ h2 {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0));
 }
 
-/* line 114, ../sass/style.sass */
+/* line 120, ../sass/style.sass */
 
 .input-submit:hover {
   background-color: #6dc162;
 }
 
-/* line 117, ../sass/style.sass */
+/* line 123, ../sass/style.sass */
 
 .has-error {
   border-color: #ce8483;
@@ -660,7 +686,7 @@ h2 {
   outline: 0;
 }
 
-/* line 121, ../sass/style.sass */
+/* line 127, ../sass/style.sass */
 
 .has-success {
   border-color: #3c763d;
@@ -671,7 +697,7 @@ h2 {
 }
 
 @media (max-width: 992px) {
-  /* line 129, ../sass/style.sass */
+  /* line 135, ../sass/style.sass */
 
   .divider {
     background: url(../img/divider-horiz.png) repeat-x;
@@ -681,7 +707,7 @@ h2 {
     width: 85%;
   }
 
-  /* line 135, ../sass/style.sass */
+  /* line 141, ../sass/style.sass */
 
   .textarea {
     width: 90%;
@@ -689,37 +715,37 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  /* line 138, ../sass/style.sass */
+  /* line 144, ../sass/style.sass */
 
   .divider {
     display: none;
   }
 
-  /* line 140, ../sass/style.sass */
+  /* line 146, ../sass/style.sass */
 
   .textarea {
     float: none !important;
   }
 
-  /* line 142, ../sass/style.sass */
+  /* line 148, ../sass/style.sass */
 
   .textarea:first-of-type {
     margin-bottom: 16px;
   }
 
-  /* line 144, ../sass/style.sass */
+  /* line 150, ../sass/style.sass */
 
   .container-divider .col-md-6 {
     height: 190px;
   }
 
-  /* line 146, ../sass/style.sass */
+  /* line 152, ../sass/style.sass */
 
   .container-divider .col-md-6:last-of-type {
     height: 100px;
   }
 
-  /* line 148, ../sass/style.sass */
+  /* line 154, ../sass/style.sass */
 
   .container-divider .col-md-6:last-of-type .btn {
     margin-top: 20px;
@@ -727,7 +753,7 @@ h2 {
 }
 
 @media (max-width: 480px) {
-  /* line 151, ../sass/style.sass */
+  /* line 157, ../sass/style.sass */
 
   .textarea {
     width: 80;

@@ -6,6 +6,8 @@ var app = {
 	},
 	setUpListeners: function() {
 
+		app.startEvent();
+
 		//activate slider of border radius
 		$('#slider1').slider({
 			range: 'min',
@@ -33,6 +35,14 @@ var app = {
 		$('form').on('keyup', 'input', app.removeError);
 	},
 
+	startEvent: function() {
+		var rad = parseInt(app.result.css('border-top-left-radius'), 10),
+				size = parseInt(app.result.css('border-top-width'), 10);
+
+		app.updateResultHTML();
+		app.updateResultCSS(rad, size);
+	},
+
 	submitForm: function(e) {
 		e.preventDefault();
 
@@ -40,7 +50,7 @@ var app = {
 		submitButton = form.find('input[type=submit]');
 
 		if (app.validateForm(form) === false) return false;
-		submitButton.attr('disabled', 'disabled');
+		
 
 
 		var email = 'Your HTML code \n' +
@@ -57,6 +67,12 @@ var app = {
 					'email' : data,
 					'getBody' : email
 				},
+				beforeSend: function() {
+					$('img.loader').show();
+				},
+				complete: function() {
+					$('img.loader').hide();
+				},
 				success: function (data) {
 					alert('Your email has been sent successfully!');
 				}
@@ -70,7 +86,7 @@ var app = {
 					textError = 'Email required';
 
 
-			if (str === '') {
+			if (str.match( /.*@.*\..*/gi ) === null ) {
 				input.tooltip({
 					placement: 'right',
 					title: textError,
@@ -126,24 +142,26 @@ var app = {
 
 		if (bdRadius > 0 && bdSize > 0) {
 					cssResultArea.val(
-					'-webkit-border-radius: ' + bdRadius + 'px;\n' +
-					'-moz-border-radius: ' + bdRadius + 'px;\n'+
-					'-ms-border-radius: ' + bdRadius + 'px;\n' +
-					'-o-border-radius: ' + bdRadius + 'px;\n' +
-					'border-radius: ' + bdRadius + 'px;\n' +
-					'border-width: ' + bdSize + 'px;\n'
+					'button {\n' +
+					'  -webkit-border-radius: ' + bdRadius + 'px;\n' +
+					'  -moz-border-radius: ' + bdRadius + 'px;\n'+
+					'  border-radius: ' + bdRadius + 'px;\n' +
+					'  border-width: ' + bdSize + 'px;\n' +
+					'}\n'
 			)
 		} else if (bdRadius > 0 && bdSize < 1) {
 					cssResultArea.val(
-					'-webkit-border-radius: ' + bdRadius + 'px;\n' +
-					'-moz-border-radius: ' + bdRadius + 'px;\n'+
-					'-ms-border-radius: ' + bdRadius + 'px;\n' +
-					'-o-border-radius: ' + bdRadius + 'px;\n' +
-					'border-radius: ' + bdRadius + 'px;\n'
+					'button {\n' +
+					'  -webkit-border-radius: ' + bdRadius + 'px;\n' +
+					'  -moz-border-radius: ' + bdRadius + 'px;\n'+
+					'  border-radius: ' + bdRadius + 'px;\n' +
+					'}\n'
 			)
 		} else if (bdRadius < 1 && bdSize > 0) {
 					cssResultArea.val(
-					'border-width: ' + bdSize + 'px;\n'
+					'button {\n' +
+					'  border-width: ' + bdSize + 'px;\n' +
+					'}\n'
 			)
 		} else if (bdRadius < 1 && bdSize < 1) {
 					cssResultArea.val('')
@@ -158,7 +176,7 @@ var app = {
 		// 			'<button>' + txtInput + '</button>\n'
 		// )
 		htmlResultArea.val(
-						'<button>' + txtInput + '</button>\n'
+						'<button class="button">' + txtInput + '</button>\n'
 			)
 	}
 
